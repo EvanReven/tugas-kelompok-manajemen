@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pelamaran Kerja</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <center><h1>Formulir Lamaran Kerja</h1></center>
+  <div class="form-container">
+    <form>
+      <div class="mb-3 form-group">
+        <label for="inputNama">Nama</label>
+        <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputNoHP">No. HP</label>
+        <input type="tel" class="form-control" id="inputNoHP" placeholder="No. HP">
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputAlamat">Alamat</label>
+        <textarea class="form-control" id="inputAlamat" rows="3" placeholder="Alamat"></textarea>
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputPendidikan">Pendidikan Terakhir</label>
+        <select class="form-select" id="inputPendidikan">
+          <option selected>Pilih Pendidikan Terakhir</option>
+          <option value="SMA/SMK">SMA/SMK</option>
+          <option value="Diploma">Diploma</option>
+          <option value="Sarjana">S1</option>
+          <option value="Magister">S2</option>
+          <option value="doctor">S3</option>
+        </select>
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputPesan">Pesan</label>
+        <textarea class="form-control" id="inputPesan" rows="3" placeholder="Pesan (opsional)"></textarea>
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputFile">Upload Berkas Lamaran</label>
+        <input class="form-control" type="file" id="inputFile">
+      </div>
+      <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#modalKirimBerhasil">Kirim</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalKirimBerhasil" tabindex="-1" role="dialog" aria-labelledby="modalKirimBerhasilLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalKirimBerhasilLabel">Kirim Lamaran Berhasil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Pelamaran Anda telah berhasil dikirim.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="redirectToIndex()">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function redirectToIndex() {
+    window.location.href = "index.php";
+  }
+</script>
+
+</body>
+</html>
